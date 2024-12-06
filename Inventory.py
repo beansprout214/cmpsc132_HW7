@@ -1,3 +1,11 @@
+# Name: Hunter Becker
+# Course: CMPSC 132
+# File Name: Inventory.py
+# Date: 12/5/24
+#
+# Description: Contains the Inventory class
+
+
 class Inventory():
     def __init__(self,
                  serial_number,
@@ -7,6 +15,11 @@ class Inventory():
         self.__serial_number = serial_number
         self.__manufacture_date = manufacture_date
         self.__lot_number = lot_number
+
+    def __str__(self):
+        return (f"Serial Number: {self.__serial_number}\n"
+                f"Manufacture Date: {self.__manufacture_date}\n"
+                f"Lot Number: {self.__lot_number}")
 
     def get_serial_number(self):
         return self.__serial_number

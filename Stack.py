@@ -1,14 +1,25 @@
+# Name: Hunter Becker
+# Course: CMPSC 132
+# File Name: Stack.py
+# Date: 12/5/24
+#
+# Description: Contains the Stack class
+# Intended for use with LIFO practices
+
+
 class Stack():
         def __init__(self):
             self.__list = []
 
         def __str__(self):
             concat = ""
+            index = 0
             for item in self.__list:
+                index += 1
                 if concat == "":
-                    concat = str(item)
+                    concat = f"{index}: {item}"
                     continue
-                concat = f"{concat}, {str(item)}"
+                concat = f"{concat}\n\n{index}: {item}"
             return concat
 
         def push(self,
